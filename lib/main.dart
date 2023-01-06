@@ -3,7 +3,7 @@ import 'package:flutter_mvc_skeleton/core/themes/dark_theme.dart';
 import 'package:flutter_mvc_skeleton/core/themes/light_theme.dart';
 import 'package:flutter_mvc_skeleton/views/my_home_page.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // init methods

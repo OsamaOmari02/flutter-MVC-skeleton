@@ -1,13 +1,12 @@
-import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
-abstract class NetworkInfo {
-  Future<bool> get isConnected;
-}
+import '../strings/failures.dart';
 
-class NetworkInfoImpl implements NetworkInfo {
-  final InternetConnectionChecker connectionChecker;
-
-  NetworkInfoImpl(this.connectionChecker);
-  @override
-  Future<bool> get isConnected => connectionChecker.hasConnection;
+class InternetConnectionService {
+  static Future<void> checkConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.none) {
+      throw OFFLINE_FAILURE_MESSAGE;
+    }
+  }
 }

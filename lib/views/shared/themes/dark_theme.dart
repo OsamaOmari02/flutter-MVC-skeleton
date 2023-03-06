@@ -6,6 +6,8 @@ const darkSecondaryColor = Color(0xff51eec2);
 
 
 final darkTheme = ThemeData(
+  useMaterial3: true,
+  fontFamily: 'AlegreyaSansSC',
   appBarTheme: const AppBarTheme(
     backgroundColor: darkPrimaryColor,
     centerTitle: true,
